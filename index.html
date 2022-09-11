@@ -14,7 +14,7 @@
 <body>
     <section class="section">
         <h1 class="title">머신러닝 서비스</h1>
-        <h2 class="subtitle">사진 분류 머신러닝 서비스</h2>
+        <h2 class="subtitle">K-POP 연예인 닮은꼴 머신러닝 서비스</h2>
     </section>
 
     <div class="mt-3 container file-upload">
@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['나연'] = 'JYP엔터테인먼트 소속 9인조 그룹 TWICE의 멤버';
-            dic_class2information['장원영'] = '스타쉽엔터테인먼트 소속 6인조 걸그룹 IVE의 멤버.';
-            dic_class2information['제니'] = 'YG엔터테인먼트 소속 4인조 걸그룹 BLACKPINK의 메인래퍼이자 리드보컬';
+            dic_class2information['안유진'] = 'J스타쉽엔터테인먼트 소속 6인조 걸그룹 IVE의 리더.';
+            dic_class2information['최예나'] = '위에화엔터테인먼트 소속 대한민국의 가수 겸 배우.';
+            dic_class2information['윈터'] = 'YSM엔터테인먼트 소속 4인조 걸그룹 aespa의 멤버.';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
